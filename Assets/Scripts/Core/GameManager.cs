@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public bool UseGestureSurface;
 
     private InputGestureReader _gestureSurface;
@@ -58,6 +57,7 @@ public class GameManager : MonoBehaviour
             surfaceTransform.sizeDelta = canvasRect.size;
             var gestureReader = gestureSurface.AddComponent<InputGestureReader>();
             gestureReader.color = Color.clear;
+            gestureSurface.transform.SetSiblingIndex(0);
         }
     }
 }
