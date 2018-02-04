@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName = "ColorPaletteAsset", menuName = "Itatake/ColorPaletteAsset", order = 0)]
 public class ColorPalettePackage : ScriptableObject
 {

@@ -5,26 +5,28 @@ using System.Collections.Generic;
 using System;
 using System.Windows;
 
+
 public class PaletteWindow : EditorWindow
 {
     private Vector2 _colorBoxSize = new Vector2(64f, 64f);
     private float _paddingA = 8;
 
-    private GUIStyle guiStyle = new GUIStyle();
-
     private static List<Color> _colors = new List<Color>();
     private static List<Texture2D> _coloredTextures = new List<Texture2D>();
 
-    private StyleManager _targetScript;
+    public List<ColorPalettePackage> ColorPackages = new List<ColorPalettePackage>();
 
     public static void SetColors(List<Color> colors)
     {
         _colors = colors;
     }
 
-    [MenuItem("Window/My Window")]
+    [MenuItem("Window/Itatake/Style Window")]
     static void Init()
     {
+        var savedData = SaveData.Load(Application.streamingAssetsPath + "\\" + "ColorPalette.uml");
+        savedData.TryGetValue<List<Color>>("ColorPalette", out _colors);
+
         PaletteWindow window = (PaletteWindow)EditorWindow.GetWindow(typeof(PaletteWindow));
 
         window.minSize = new Vector2(320, 74);
@@ -35,8 +37,10 @@ public class PaletteWindow : EditorWindow
 
     private void Awake()
     {
-        _targetScript = FindObjectOfType<StyleManager>();
-        _colors = _targetScript.ActivePackage.GetColors();
+
+        if (_colors.Count == 0)
+            return;
+
         _coloredTextures.Clear();
 
         foreach (Color clr in _colors)
@@ -60,7 +64,8 @@ public class PaletteWindow : EditorWindow
 
     void OnGUI()
     {
-        if (_targetScript == null)
+
+        if (_colors.Count == 0)
         {
             EditorGUILayout.LabelField("PaletteWindow Requires a StyleManager singleton");
             return;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileName>ColorPalette</fileName>
+  <serializedTypes>
+    <string>System.Collections.Generic.List`1[[UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</string>
+  </serializedTypes>
+  <serializedData>
+    <DataContainer>
+      <key>ColorPalette</key>
+      <value xsi:type="ArrayOfColor">
+        <Color>
+          <r>0.7794118</r>
+          <g>0.3700569</g>
+          <b>0.0630406737</b>
+          <a>1</a>
+        </Color>
+        <Color>
+          <r>0.3602941</r>
+          <g>0.211010486</g>
+          <b>0.10067042</b>
+          <a>1</a>
+        </Color>
+        <Color>
+          <r>0.411764681</r>
+          <g>0.270069182</g>
+          <b>0.166522488</b>
+          <a>1</a>
+        </Color>
+        <Color>
+          <r>0.572549045</r>
+          <g>0.9490196</g>
+          <b>1</b>
+          <a>1</a>
+        </Color>
+        <Color>
+          <r>0</r>
+          <g>0.880733967</g>
+          <b>1</b>
+          <a>1</a>
+        </Color>
+      </value>
+    </DataContainer>
+  </serializedData>
+</SaveData>
