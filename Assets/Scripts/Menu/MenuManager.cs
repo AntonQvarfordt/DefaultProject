@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour {
+public class MenuManager : StateMachineBehaviour {
 
     private CanvasGroup _canvasGroup;
 
-    private void Awake()
-    {
-        _canvasGroup = GetComponent<CanvasGroup>();        
-    }
 
     public void ConfirmMenuClick ()
     {
