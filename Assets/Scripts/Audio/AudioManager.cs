@@ -1,16 +1,69 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Audio;
+[RequireComponent(typeof(AudioSourcePool))]
+[RequireComponent(typeof(BackgroundMusicPlayer))]
+public class AudioManager : MonoBehaviour
+{
+    public AudioMixer AudioMixer;
 
-public class AudioManager : MonoBehaviour {
+    public static AudioManager Instance
+    {
+        get
+        {
+            if (instance != null)
+                return instance;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+            instance = FindObjectOfType<AudioManager>();
+
+            if (instance != null)
+                return instance;
+
+            Create();
+
+            return instance;
+        }
+    }
+
+    protected static AudioManager instance;
+
+    private AudioSourcePool _audioSourcePool;
+    private BackgroundMusicPlayer _musicPlayer;
+
+    public static AudioManager Create()
+    {
+        GameObject sceneControllerGameObject = new GameObject("AudioManager");
+        instance = sceneControllerGameObject.AddComponent<AudioManager>();
+
+        return instance;
+    }
+
+    private void Awake()
+    {
+        _audioSourcePool = GetComponent<AudioSourcePool>();
+        _musicPlayer = GetComponent<BackgroundMusicPlayer>();
+    }
+
+    public void PlayClipTrigger (AudioClip clip)
+    {
+        PlayOneShot(clip);
+    }
+
+    public void PlayOneShot (AudioClip clip, AudioMixerGroup mixerGroup = null, float volume = 1, float pitch = 1)
+    {
+        if (mixerGroup == null)
+            mixerGroup = AudioMixer.FindMatchingGroups("SFXMaster/SFX")[0];
+
+        var audioSourceObject = _audioSourcePool.GetAudoSourceObject();
+        var audioSource = audioSourceObject.GetAudioSource;
+
+
+        audioSource.clip = clip;
+        audioSource.volume = volume;
+        audioSource.pitch = pitch;
+        audioSource.outputAudioMixerGroup = mixerGroup;
+
+        audioSource.Play();
+
+        _audioSourcePool.ReturnToPoolOnNotPlaying(audioSourceObject);
+    }
 }

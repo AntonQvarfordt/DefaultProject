@@ -205,6 +205,7 @@ PlayerSettings:
   tvOSSmallIconLayers: []
   tvOSSmallIconLayers2x: []
   tvOSLargeIconLayers: []
+  tvOSLargeIconLayers2x: []
   tvOSTopShelfImageLayers: []
   tvOSTopShelfImageLayers2x: []
   tvOSTopShelfImageWideLayers: []
@@ -550,7 +551,7 @@ PlayerSettings:
   webGLUseWasm: 0
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
-    1: UNITY_POST_PROCESSING_STACK_V1;USES_NOTIFICATION_SERVICE
+    1: UNITY_POST_PROCESSING_STACK_V1;USES_NOTIFICATION_SERVICE;UNITY_SOCIAL
     4: USES_NOTIFICATION_SERVICE
     7: UNITY_POST_PROCESSING_STACK_V1;USES_NOTIFICATION_SERVICE
     13: UNITY_POST_PROCESSING_STACK_V1

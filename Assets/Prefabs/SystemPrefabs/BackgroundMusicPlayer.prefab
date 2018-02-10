@@ -19,7 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4022868196523134}
+  - component: {fileID: 114393063258954406}
   - component: {fileID: 114706727877688214}
+  - component: {fileID: 114629940513389800}
   m_Layer: 0
   m_Name: BackgroundMusicPlayer
   m_TagString: Untagged
@@ -40,6 +42,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114393063258954406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331888833568922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec664e4903cbc24c99b1a4c3cef4532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114629940513389800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331888833568922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7deb7d5432d1e4d46addb332466c676f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1768652572767290, guid: 1c75faa36ad69fc49b9041ddfbe30ccd, type: 2}
+  initialPoolCount: 10
 --- !u!114 &114706727877688214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,10 +80,10 @@ MonoBehaviour:
   musicAudioClip: {fileID: 8300000, guid: 05518d7c3da7d264b9da31719e15267b, type: 3}
   musicOutput: {fileID: 243046328477163042, guid: 011760a7ba679c6428c660ed7fdff584,
     type: 2}
-  musicPlayOnAwake: 1
+  musicPlayOnAwake: 0
   musicVolume: 1
   ambientAudioClip: {fileID: 8300000, guid: 0f7c9bb738bc4c049b4e4998cce2e8ca, type: 3}
   ambientOutput: {fileID: 243349202575207306, guid: 011760a7ba679c6428c660ed7fdff584,
     type: 2}
-  ambientPlayOnAwake: 1
+  ambientPlayOnAwake: 0
   ambientVolume: 1
