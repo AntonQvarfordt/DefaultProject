@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public abstract class Menu : MonoBehaviour {
+public class Menu : FSMState
+{
+    public GameObject Root;
+    public Menu(string fsmStateName, GameObject root) : base(fsmStateName)
+    {
+        Root = root;
+    }
 
-    public abstract void Open();
-
-    public abstract void TransitionIn(Action onComplete);
-
-    public abstract void TransitionOut(Action onComplete);
 }

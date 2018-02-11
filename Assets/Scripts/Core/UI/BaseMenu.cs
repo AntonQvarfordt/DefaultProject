@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class BaseMenu : Menu
+public class BaseMenu : FSMEntry
 {
-    public Menu ActiveMenu;
-
-    public Dictionary<string, Button> IndependentButtons = new Dictionary<string, Button>();
+    public GameObject Root;
+    public BaseMenu(string fsmStateName, GameObject root) : base(fsmStateName)
+    {
+        Root = root;
+    }
 }
