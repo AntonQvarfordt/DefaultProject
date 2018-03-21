@@ -138,7 +138,7 @@ namespace WhiteCat.Tween
 #if UNITY_5_3_OR_NEWER
 			if (hdr)
 			{
-				from.colorValue = EditorGUI.ColorField(_rect, EditorUI.TempContent("From"), from.colorValue, true, true, true, EditorUI.colorPickerHDRConfig);
+				from.colorValue = EditorGUI.ColorField(_rect, EditorUI.TempContent("From"), from.colorValue, true, true, true);
 			}
 			else
 #endif
@@ -153,7 +153,7 @@ namespace WhiteCat.Tween
 #if UNITY_5_3_OR_NEWER
 			if (hdr)
 			{
-				to.colorValue = EditorGUI.ColorField(_rect, EditorUI.TempContent("To"), to.colorValue, true, true, true, EditorUI.colorPickerHDRConfig);
+				to.colorValue = EditorGUI.ColorField(_rect, EditorUI.TempContent("To"), to.colorValue, true, true, true);
 			}
 			else
 #endif

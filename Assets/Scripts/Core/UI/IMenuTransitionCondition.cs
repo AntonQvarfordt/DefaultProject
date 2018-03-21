@@ -9,6 +9,7 @@ public class IMenuTransitionCondition : IFSMTransitionCondition
     public IMenuTransitionCondition(Object pObj)
     {
         passedObject = pObj;
+        Debug.Log(passedObject);
     }
 
     //default return false,means don't switch state

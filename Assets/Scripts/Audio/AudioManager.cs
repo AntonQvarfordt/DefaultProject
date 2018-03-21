@@ -43,6 +43,11 @@ public class AudioManager : MonoBehaviour
         _musicPlayer = GetComponent<BackgroundMusicPlayer>();
     }
 
+    private void Start()
+    {
+        Debug.Log(_musicPlayer);
+    }
+
     public void PlayClipTrigger (AudioClip clip)
     {
         PlayOneShot(clip);

@@ -15,8 +15,6 @@ namespace WhiteCat.Editor
 		static GUIStyle _buttonMiddleStyle;
 		static GUIStyle _buttonRightStyle;
 		static GUIStyle _centeredBoldLabelStyle;
-		static ColorPickerHDRConfig _colorPickerHDRConfig;
-
 
 		/// <summary>
 		/// 按钮 GUIStyle
@@ -113,17 +111,17 @@ namespace WhiteCat.Editor
 		/// <summary>
 		/// HDR 拾色器设置
 		/// </summary>
-		public static ColorPickerHDRConfig colorPickerHDRConfig
-		{
-			get
-			{
-				if (_colorPickerHDRConfig == null)
-				{
-					_colorPickerHDRConfig = new ColorPickerHDRConfig(0f, 8f, 0.125f, 3f);
-				}
-				return _colorPickerHDRConfig;
-			}
-		}
+		//public static ColorPickerHDRConfig colorPickerHDRConfig
+		//{
+		//	get
+		//	{
+		//		if (_colorPickerHDRConfig == null)
+		//		{
+		//			_colorPickerHDRConfig = new ColorPickerHDRConfig(0f, 8f, 0.125f, 3f);
+		//		}
+		//		return _colorPickerHDRConfig;
+		//	}
+		//}
 
 	} // struct EditorUI
 
