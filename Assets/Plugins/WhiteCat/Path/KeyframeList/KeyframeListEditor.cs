@@ -205,7 +205,7 @@ namespace WhiteCat.Paths
 					handleSize = HandleUtility.GetHandleSize(_point);
 
 #if UNITY_5_6_OR_NEWER
-					Handles.FreeMoveHandle(_point, identityQuaternion, handleSize * _controlPointCapSize, zeroVector3, Handles.DotHandleCap);
+					Handles.FreeMoveHandle(_point, handleSize * _controlPointCapSize, zeroVector3, Handles.DotHandleCap);
 #else
 					Handles.FreeMoveHandle(_point, identityQuaternion, handleSize * _controlPointCapSize, zeroVector3, Handles.DotCap);
 #endif

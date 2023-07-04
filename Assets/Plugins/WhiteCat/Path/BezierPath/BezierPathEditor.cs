@@ -180,7 +180,7 @@ namespace WhiteCat.Paths
 
 				_handleSize = HandleUtility.GetHandleSize(_middle = GetPoint(_location)) * _splineCapSize;
 #if UNITY_5_6_OR_NEWER
-				Handles.FreeMoveHandle(_middle, _identityQuaternion, _handleSize, _zeroVector3, Handles.CircleHandleCap);
+				Handles.FreeMoveHandle(_middle, _handleSize, _zeroVector3, Handles.CircleHandleCap);
 #else
 				Handles.FreeMoveHandle(_middle, _identityQuaternion, _handleSize, _zeroVector3, Handles.CircleCap);
 #endif
@@ -221,7 +221,7 @@ namespace WhiteCat.Paths
 				_handleSize = HandleUtility.GetHandleSize(_back) * _controlPointCapSize;
 
 #if UNITY_5_6_OR_NEWER
-				_back = Handles.FreeMoveHandle(_back, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotHandleCap);
+				_back = Handles.FreeMoveHandle(_back, _handleSize, _zeroVector3, Handles.DotHandleCap);
 #else
 				_back = Handles.FreeMoveHandle(_back, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotCap);
 #endif
@@ -252,7 +252,7 @@ namespace WhiteCat.Paths
 				_handleSize = HandleUtility.GetHandleSize(_middle) * _controlPointCapSize;
 
 #if UNITY_5_6_OR_NEWER
-				_middle = Handles.FreeMoveHandle(_middle, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotHandleCap);
+				_middle = Handles.FreeMoveHandle(_middle, _handleSize, _zeroVector3, Handles.DotHandleCap);
 #else
 				_middle = Handles.FreeMoveHandle(_middle, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotCap);
 #endif
@@ -283,7 +283,7 @@ namespace WhiteCat.Paths
 				_handleSize = HandleUtility.GetHandleSize(_forward) * _controlPointCapSize;
 
 #if UNITY_5_6_OR_NEWER
-				_forward = Handles.FreeMoveHandle(_forward, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotHandleCap);
+				_forward = Handles.FreeMoveHandle(_forward, _handleSize, _zeroVector3, Handles.DotHandleCap);
 #else
 				_forward = Handles.FreeMoveHandle(_forward, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotCap);
 #endif

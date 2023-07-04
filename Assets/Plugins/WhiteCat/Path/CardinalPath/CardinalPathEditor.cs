@@ -164,7 +164,7 @@ namespace WhiteCat.Paths
 				_handleSize = HandleUtility.GetHandleSize(_node = GetPoint(_location)) * _splineCapSize;
 
 #if UNITY_5_6_OR_NEWER
-				Handles.FreeMoveHandle(_node, _identityQuaternion, _handleSize, _zeroVector3, Handles.CircleHandleCap);
+				Handles.FreeMoveHandle(_node, _handleSize, _zeroVector3, Handles.CircleHandleCap);
 #else
 				Handles.FreeMoveHandle(_node, _identityQuaternion, _handleSize, _zeroVector3, Handles.CircleCap);
 #endif
@@ -199,7 +199,7 @@ namespace WhiteCat.Paths
 				_handleSize = HandleUtility.GetHandleSize(_node) * _controlPointCapSize;
 
 #if UNITY_5_6_OR_NEWER
-				_node = Handles.FreeMoveHandle(_node, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotHandleCap);
+				_node = Handles.FreeMoveHandle(_node, _handleSize, _zeroVector3, Handles.DotHandleCap);
 #else
 				_node = Handles.FreeMoveHandle(_node, _identityQuaternion, _handleSize, _zeroVector3, Handles.DotCap);
 #endif
